@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Aladin&family=Francois+One&family=Poppins:wght@300;500;600;700&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Staatliches&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
@@ -28,7 +28,16 @@ body li {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2em 0 2em 0;
+}
+
+#main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 2rem 1.5rem;
+    transition: .2s;
 }
 
 #brand-logo-cont {
@@ -42,9 +51,9 @@ body li {
 
 input {
     display: none;
-  }
-  
-  .open {
+}
+
+.open {
     background-color: #fff;
     width: 24px;
     height: 4px;
@@ -53,9 +62,9 @@ input {
     cursor: pointer;
     position: relative;
     top: 8px;
-  }
-  
-  .open:before {
+}
+
+.open:before {
     content: "";
     background-color: #fff;
     width: 24px;
@@ -66,9 +75,9 @@ input {
     top: -8px;
     transform: rotate(0deg);
     transition: all 0.3s ease;
-  }
-  
-  .open:after {
+}
+
+.open:after {
     content: "";
     background-color: #fff;
     width: 24px;
@@ -79,35 +88,35 @@ input {
     top: 4px;
     transform: rotate(0deg);
     transition: all 0.3s ease;
-  }
-  
-  .menuOpen {
+}
+
+.menuOpen {
     width: 24px;
     height: 20px;
     display: block;
     padding: 15px;
     cursor: pointer;
     float: right;
-  }
-  
-  .menuOpen:hover .open:before {
+}
+
+.menuOpen:hover .open:before {
     top: -9px;
-  }
-  
-  .menuOpen:hover .open:after {
+}
+
+.menuOpen:hover .open:after {
     top: 5px;
-  }
-  
-  .menu {
+}
+
+.menu {
     position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     left: 0;
     background: #000;
-  }
-  
-  .menu label {
+}
+
+.menu label {
     width: 30px;
     height: 30px;
     position: absolute;
@@ -115,24 +124,24 @@ input {
     top: 20px;
     background-size: 100%;
     cursor: pointer;
-  }
-  
-  .menu .menuContent {
+}
+
+.menu .menuContent {
     position: relative;
     top: 50%;
     font-size: 54px;
     text-align: center;
     padding-bottom: 20px;
-    margin-top: -250px;
-  }
-  
-  .menu ul {
+    margin-top: -285px;
+}
+
+.menu ul {
     list-style: none;
     padding: 0;
     margin: 0 auto;
-  }
-  
-  .menu ul li a {
+}
+
+.menu ul li a {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -142,42 +151,42 @@ input {
     padding: 2.5rem 0;
     font-size: 2.5rem;
     letter-spacing: 3px;
-  }
-  
-  .menu ul li a:hover {
-    color: #333;
-  }
-  
-  .menu ul li:hover {
-    background: #fff;
-  }
-  
-  .menuEffects {
+}
+
+.menu ul li a:hover {
+    color: #fff;
+}
+
+.menu ul li:hover {
+    background: #ffa500;
+}
+
+.menuEffects {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s, visibility 0.5s;
-  }
-  
-  .menuEffects ul {
+}
+
+.menuEffects ul {
     transform: translateY(0%);
     transition: all 0.5s;
-  }
-  
-  #menuToggle:checked ~ .menuEffects {
+}
+
+#menuToggle:checked~.menuEffects {
     opacity: 1;
     visibility: visible;
     transition: opacity 0.5s;
-  }
-  
-  #menuToggle:checked ~ .menuEffects ul {
+}
+
+#menuToggle:checked~.menuEffects ul {
     opacity: 1;
-  }
-  
-  #menuToggle:checked ~ .menuOpen .open {
+}
+
+#menuToggle:checked~.menuOpen .open {
     background-color: transparent;
-  }
-  
-  #menuToggle:checked ~ .menuOpen .open:before {
+}
+
+#menuToggle:checked~.menuOpen .open:before {
     content: "";
     background-color: #fff;
     transform: rotate(45deg);
@@ -185,9 +194,9 @@ input {
     top: 0;
     right: 0;
     z-index: 1;
-  }
-  
-  #menuToggle:checked ~ .menuOpen .open:after {
+}
+
+#menuToggle:checked~.menuOpen .open:after {
     content: "";
     background-color: #fff;
     transform: rotate(-45deg);
@@ -195,9 +204,116 @@ input {
     top: 0;
     right: 0;
     z-index: 1;
-  }
-  
-  #menuToggle:not(:checked) ~ .menuEffects ul {
+}
+
+#menuToggle:not(:checked)~.menuEffects ul {
     transform: translateY(-30%);
-  }
-  
+}
+
+.home {
+    min-height: 100vh;
+    background-size: cover !important;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat !important;
+}
+
+.home-bg-image {
+    position: relative;
+}
+
+.home-bg-image img {
+    width: 100%;
+    height: auto;
+    opacity: 0.15;
+}
+
+.home-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: #fff;
+    width: 93%;
+}
+
+.home-content h1{
+    font-size: 6rem;
+    letter-spacing: 3px;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    font-family: Staatliches,cursive;
+}
+
+.home-content p{
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+.orderButton{
+    background-color: #ffa500;
+    color: #000;
+    padding: 1rem 1.1rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    transition: .2s;
+    margin-top: 2rem;
+    display: inline-block;
+    width: 13rem;
+    font-family: Staatliches,cursive;
+}
+.arrow-center
+{
+    position: absolute;
+    top: 132%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 110px;
+    border-left: 6px dashed rgba(255,255,255,.1);
+}
+.arrow
+{
+    position: absolute;
+    top: 0;
+    left: -6px;
+    height: 40px;
+    width: 6px;
+    background: #fff;
+    animation: animate 2s infinite;
+}
+.arrow:before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 6px solid #fff;
+    border-right: 6px solid #fff;
+    transform: rotate(45deg);
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    50%
+    {
+        transform: translateY(80px);
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(160px);
+        opacity: 0;
+    }
+}
