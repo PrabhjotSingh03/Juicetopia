@@ -1,16 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="js/script.js"></script>
   <title>Juicetopia | Juice Bar</title>
-  <link rel="icon" type="image/x-icon"  href="./images/titlelogo.png"  sizes="96×96">
+  <link rel="icon" type="image/png" href="./images/titlelogo.png">
+  <link rel="stylesheet" type="text/css" href="style/style.css">
 </head>
-<body>
 
+<body>
+  <header id="main-nav" class="content-wrapper">
+    <div class="main-container main-nav-container">
+      <div id="brand-logo-cont">
+        <img src="images/logo.png" class="main-logo" alt="Brand Logo">
+      </div>
+      <nav id="menuArea">
+        <input type="checkbox" id="menuToggle"></input>
+
+        <label for="menuToggle" class="menuOpen">
+          <div class="open"></div>
+        </label>
+
+        <div class="menu menuEffects">
+          <label for="menuToggle"></label>
+          <div class="menuContent">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Menu</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
 
   <div class="copyright">
     Developed by: <a href="#">https://prabhjotsinghsains.co.in/</a>.
   </div>
 </body>
+
 </html>
